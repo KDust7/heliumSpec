@@ -35,6 +35,10 @@ jobs:
       - name: Build site
         run: npm run build
         working-directory: site
+        env:
+          # Dynamically set base path from repo name — works for any repo
+          BASE_PATH: /${{ github.event.repository.name }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

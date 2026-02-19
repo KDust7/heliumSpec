@@ -2,10 +2,14 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+// Dynamic base path: reads from BASE_PATH env var (set by GitHub Actions)
+// Falls back to '/' for local development
+const base = process.env.BASE_PATH || '/';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.github.io',
-  base: '/helium',
+  site: process.env.SITE_URL || 'http://localhost:4321',
+  base,
   integrations: [
     starlight({
       title: 'Helium',
@@ -20,7 +24,7 @@ export default defineConfig({
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/example/helium',
+          href: 'https://github.com/KDust7/heliumSpec',
         },
       ],
       head: [

@@ -29,16 +29,16 @@ Helium sits between Chrome extensions and the proxy browser, translating `chrome
 
 The spec is organized into 7 documents:
 
-1. **[System Architecture](/helium/spec/architecture/)** — The 6-layer stack, design principles, threading model, and data flow diagrams.
+1. **[System Architecture](../spec/architecture/)** — The 6-layer stack, design principles, threading model, and data flow diagrams.
 
-2. **[Message Passing](/helium/spec/message-passing/)** — The SharedWorker-based message backbone, including `sendMessage`, `connect`, long-lived ports, mesh relay fallback, and crash recovery.
+2. **[Message Passing](../spec/message-passing/)** — The SharedWorker-based message backbone, including `sendMessage`, `connect`, long-lived ports, mesh relay fallback, and crash recovery.
 
-3. **[Execution Contexts](/helium/spec/execution-contexts/)** — How background pages, content scripts, dedicated workers, and extension pages are emulated.
+3. **[Execution Contexts](../spec/execution-contexts/)** — How background pages, content scripts, dedicated workers, and extension pages are emulated.
 
-4. **[API Binding](/helium/spec/api-binding/)** — The handler registry that maps host application functions into `chrome.*` APIs, including the fail-safe contract and graceful degradation.
+4. **[API Binding](../spec/api-binding/)** — The handler registry that maps host application functions into `chrome.*` APIs, including the fail-safe contract and graceful degradation.
 
-5. **[API Implementation](/helium/spec/api-implementation/)** — Per-namespace implementation details for all 4 tiers of Chrome APIs, from `chrome.runtime` to `chrome.tts`.
+5. **[API Implementation](../spec/api-implementation/)** — Per-namespace implementation details for all 4 tiers of Chrome APIs, from `chrome.runtime` to `chrome.tts`.
 
-6. **[Proxy Integration](/helium/spec/proxy-integration/)** — How Helium integrates with Reflux (content injection) and BareMux (network interception), including the bootstrap script, DNR evaluation, and cookie jar.
+6. **[Proxy Integration](../spec/proxy-integration/)** — How Helium integrates with Reflux (content injection) and BareMux (network interception), including the bootstrap script, DNR evaluation, and cookie jar.
 
-7. **[Manifest & CRX Loader](/helium/spec/manifest-parser/)** — CRX3 unpacking, manifest parsing, permission resolution, virtual filesystem, and the atomic staging-then-swap install mechanism.
+7. **[Manifest & CRX Loader](../spec/manifest-parser/)** — CRX3 unpacking, manifest parsing, permission resolution, virtual filesystem, and the atomic staging-then-swap install mechanism.
