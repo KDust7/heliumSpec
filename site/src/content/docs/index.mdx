@@ -1,0 +1,77 @@
+---
+title: Welcome to Helium
+description: A Chrome Extension API emulation layer for proxy-based browsers.
+template: splash
+hero:
+  tagline: A lightweight Chrome Extension API emulation layer that brings full extension support to proxy-based browsers like DaydreamX.
+  actions:
+    - text: Read the Spec
+      link: /helium/spec/architecture/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/example/helium
+      variant: minimal
+      icon: external
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## What is Helium?
+
+Helium is a **6-layer architecture** that emulates Chrome's extension APIs entirely within the browser, without native code. It integrates with proxy stacks (like Ultraviolet and Scramjet) to inject, isolate, and manage Chrome extensions in any web-based browser environment.
+
+<CardGrid>
+  <Card title="Proxy-Agnostic" icon="puzzle">
+    Works with any proxy stack — Ultraviolet, Scramjet, or custom implementations. No proxy-specific hooks required.
+  </Card>
+  <Card title="Full MV2 & MV3 Support" icon="rocket">
+    Equal support for Manifest V2 and V3, including background pages, service workers, content scripts, and all messaging APIs.
+  </Card>
+  <Card title="Context Isolation" icon="approve-check-circle">
+    4-layer proxy membrane sandbox provides Chrome-grade content script isolation without native browser support.
+  </Card>
+  <Card title="Host Binding" icon="setting">
+    Clean separation between Helium's API emulation and the host browser's UI. Bind your own tab, window, and bookmark implementations.
+  </Card>
+</CardGrid>
+
+## Explore the Specification
+
+<CardGrid>
+  <LinkCard
+    title="System Architecture"
+    description="The 6-layer stack, design principles, and data flow."
+    href="/helium/spec/architecture/"
+  />
+  <LinkCard
+    title="Message Passing"
+    description="SharedWorker backbone, mesh fallback, ACK/retry protocol."
+    href="/helium/spec/message-passing/"
+  />
+  <LinkCard
+    title="Execution Contexts"
+    description="Background pages, content scripts, workers, and extension pages."
+    href="/helium/spec/execution-contexts/"
+  />
+  <LinkCard
+    title="API Binding"
+    description="How host applications map their functions into chrome.* APIs."
+    href="/helium/spec/api-binding/"
+  />
+  <LinkCard
+    title="API Implementation"
+    description="Detailed per-namespace implementation guide with status tracking."
+    href="/helium/spec/api-implementation/"
+  />
+  <LinkCard
+    title="Proxy Integration"
+    description="Reflux injection, BareMux middleware, and network interception."
+    href="/helium/spec/proxy-integration/"
+  />
+  <LinkCard
+    title="Manifest & CRX Loader"
+    description="CRX3 unpacking, manifest parsing, and extension registration."
+    href="/helium/spec/manifest-parser/"
+  />
+</CardGrid>
